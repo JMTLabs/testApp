@@ -16,7 +16,7 @@ class ProjectsTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @project.description
     fill_in "Title", with: @project.title
-    click_on "Create Project"
+    click_on "Lets go eat!"
 
     assert_text "Project was successfully created"
     click_on "Back"
