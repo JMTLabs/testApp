@@ -12,12 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Distance?%>
-    <%= form.number_field :title, in: 1.0..20.0, step: 0.5 %>
+    <%= form.label :Distance%>
+    <%= form.number_field :distance, in: 1.0..20.0, step: 0.5 %>
   </div>
 
   <div class="field">
-    <%= form.label :Guests? %>
+    <%= form.label :Guests%>
+    <%= form.number_field :title, in: 0.0..20.0, step: 1.0 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Price%>
     <%= form.number_field :title, in: 0.0..20.0, step: 1.0 %>
   </div>
 

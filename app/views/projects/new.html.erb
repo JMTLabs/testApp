@@ -1,20 +1,31 @@
-<style>
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+<style> 
+#grad1 {
+  height: 400px;
+  background-color: white;
+  background-image: linear-gradient(Baby Blue, white);
 }
 </style>
 
-<button class="button">Lets Grab Something</button>
 
-<%= render 'form', project: @project %>
-<%= button_to "Nevermind, Lets try again some other time", projects_path, :method => :get %>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body style="background-color:lightgrey;">
+  <div class="w3-container w3-blue">
+  <h5>Lets Grab Something</h5>
+  <p><%= render 'form', project: @project %></p>
+  </div>
+  <div class="w3-container w3-lightgrey">
+  <h5>      </h5>
+  <p>       </p>
+  </div>
+  <div class="w3-container w3-blue">
+  <h5>Not Hungry?</h5>
+  <p><%= button_to "Nevermind, Lets try again some other time", projects_path, :method => :get %></p>
+  </div>
+</body>
+
+
+
+
+
 

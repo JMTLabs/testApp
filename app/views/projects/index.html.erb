@@ -1,7 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <style>
+
+#grad1 {
+  height: 200px;
+  background-color: #cccccc;
+  background-image: linear-gradient(white, blue);
+}
+
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -21,7 +29,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #7393B3;
   color: white;
 }
 
@@ -41,6 +49,11 @@
 </style>
 
 
+<body style="background-color:lightgrey;">
+
+<div class="w3-container w3-blue">
+  <h5>Where are we going?</h5>
+</div>
 
 
 <table id="customers">
@@ -58,15 +71,63 @@
       <td><%= project.title %></td>
       <td><%= project.description %></td>
       <% if user_signed_in? %>
-        <td><%= link_to 'Where we going?', project %></td>
-        <td><%= link_to 'Lets go somewhere else.', edit_project_path(project) %></td>
-        <td><%= link_to 'Lets try again some other time', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show Meal Details', project %></td>
+        <td><%= link_to 'Change Meal Detials', edit_project_path(project) %></td>
+        <td><%= link_to 'Delete Meal', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tr>
   <% end %>
 </table>
 
+<div class="w3-container w3-blue">
+  <h5>Whats Near by?</h5>
+</div>
+
+<table id="customers">
+  <tr>
+    <th>Resturant Name</th>
+    <th>Distance (Miles)</th>
+    <th>Price (S)</th>
+    <th>Style</th>
+  </tr>
+  <tr>
+    <td>Chick-fil-A</td>
+    <td>5</td>
+    <td>$</th>
+    <td>fast food</th>
+  </tr>
+  <tr>
+    <td>Qudoba</td>
+    <td>5</td>
+    <td>$</th>
+    <td>fast food</th>
+  </tr>
+  <tr>
+    <td>EMI Thai</td>
+    <td>4</td>
+    <td>$$</th>
+    <td>sit down</th>
+  </tr>
+  <tr>
+    <td>Jersey Mikes</td>
+    <td>2</td>
+    <td>$</th>
+    <td>fast food</th>
+  </tr>
+  <tr>
+    <td>Redleg Brewing Co.</td>
+    <td>0.5</td>
+    <td>$$</th>
+    <td>sit down</th>
+  </tr>
+</table>
+
+<div class="w3-container w3-blue">
+  <h5>Wanna eat?</h5>
+  <p><%= button_to "Lets Grab Something", new_project_path, :method => :get %></p>
+</div>
+
+
 <br>
 
 
-<%= button_to "Lets Grab Something", new_project_path, :method => :get %>
