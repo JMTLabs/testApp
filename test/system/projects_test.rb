@@ -15,8 +15,10 @@ class ProjectsTest < ApplicationSystemTestCase
     click_on "New Project"
 
     fill_in "Description", with: @project.description
+    fill_in "Distance", with: @project.distance
+    fill_in "Price", with: @project.price
     fill_in "Title", with: @project.title
-    click_on "Lets go eat!"
+    click_on "Create Project"
 
     assert_text "Project was successfully created"
     click_on "Back"
@@ -27,6 +29,8 @@ class ProjectsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Description", with: @project.description
+    fill_in "Distance", with: @project.distance
+    fill_in "Price", with: @project.price
     fill_in "Title", with: @project.title
     click_on "Update Project"
 

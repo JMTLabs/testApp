@@ -59,17 +59,21 @@
 <table id="customers">
   <tr>
     <th>Resturant Name</th>
+    <th>Style</th>
     <th>Distance</th>
+    <th>Price</th>
     <% if user_signed_in? %>
-      <th>Where we going?</th>
-      <th>Lets go somewhere else.</th>
-      <th>Lets try again some other time</th>
+      <th>Show Meal Details</th>
+      <th>Change Meal Detials</th>
+      <th>Delete Meal</th>
     <% end %>
   </tr>
   <% @projects.each do |project| %>
     <tr>
       <td><%= project.title %></td>
       <td><%= project.description %></td>
+      <td><%= project.distance %></td>
+      <td><%= project.price %></td>
       <% if user_signed_in? %>
         <td><%= link_to 'Show Meal Details', project %></td>
         <td><%= link_to 'Change Meal Detials', edit_project_path(project) %></td>
@@ -87,37 +91,37 @@
   <tr>
     <th>Resturant Name</th>
     <th>Distance (Miles)</th>
-    <th>Price (S)</th>
+    <th>Price ($)</th>
     <th>Style</th>
   </tr>
   <tr>
     <td>Chick-fil-A</td>
     <td>5</td>
-    <td>$</th>
+    <td>10</th>
     <td>fast food</th>
   </tr>
   <tr>
-    <td>Qudoba</td>
+    <td>Qdoba</td>
     <td>5</td>
-    <td>$</th>
+    <td>12</th>
     <td>fast food</th>
   </tr>
   <tr>
     <td>EMI Thai</td>
     <td>4</td>
-    <td>$$</th>
+    <td>20</th>
     <td>sit down</th>
   </tr>
   <tr>
     <td>Jersey Mikes</td>
     <td>2</td>
-    <td>$</th>
+    <td>15</th>
     <td>fast food</th>
   </tr>
   <tr>
     <td>Redleg Brewing Co.</td>
     <td>0.5</td>
-    <td>$$</th>
+    <td>25</th>
     <td>sit down</th>
   </tr>
 </table>
@@ -129,5 +133,3 @@
 
 
 <br>
-
-

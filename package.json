@@ -1,5 +1,5 @@
 {
-  "name": "lets-grab-something-local",
+  "name": "lgs",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
